@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --primary: hsl(148, 38%, 91%);
+    --secondary: hsl(186, 15%, 59%);
+    --tertiary: hsl(169, 82%, 27%);
+    --error: hsl(0, 66%, 56%);
+    --flex: flex;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body{
+    display: var(--flex);
+    place-content: center;
+    background:  var(--primary);
+    font-family: "Karla", sans-serif;
+    position: relative;
+}
+
+form{
+    margin: 3em auto;
+    padding: 20px 30px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    background: hsl(0, 0%, 100%);
+    color:  var(--secondary);
+}
+
+form h1{
+    margin: 25px auto;
+    font-size: 22px;
+    color: hsl(187, 24%, 22%);
+}
+
+form .name{
+    display: var(--flex);
+    align-items: center;
+    gap: 0 15px;
+}
+.name input[type="text"]{
+    width: inherit;
+    height: 3em;
+    padding: 0 15px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    outline: none;
+ }
+ .name input:hover{
+    border: 1px solid  var(--tertiary);
+ }
+form .first-name,
+.last-name{
+    display: var(--flex);
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 15.75em;
+}
+.first-name label,
+.last-name label{
+    margin-bottom: inherit;
+}
+
+form .email{
+   display: var(--flex);
+   flex-direction: column;
+   margin-bottom: 10px;
+   width: 32.43em;
+}
+.email label{
+   margin-bottom: inherit;
+}
+.email input[type="text"]{
+   height: 3em;
+   padding: 0 15px;
+   border: 1px solid var(--secondary);
+   border-radius: 5px;
+   outline: none;
+}
+.email input[type="email"]:hover{
+    border: 1px solid  var(--tertiary);
+}
+
+form .query-wrapper{
+    margin-bottom: 10px;
+}
+form .query-wrapper p{
+    margin-bottom: inherit;
+}
+form .query-type{
+    display: var(--flex);
+    gap: 0 15px;
+}
+.query-type input[type="radio"]{
+    margin: 10px;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+.query-type .general-enquiry:active,
+.support-request:active{
+    background-color: var(--primary);
+}
+.query-type .general-enquiry,
+.support-request{
+    display: var(--flex);
+    justify-content: start;
+    align-items: center;
+    width: 18em;
+    height: 3em;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+}
+.general-enquiry label,
+.support-request label{
+    cursor: pointer;
+}
+.query-type .general-enquiry:hover,
+.support-request:hover{
+    border: 1px solid  var(--tertiary);
+}
+
+form .message{
+    display: var(--flex);
+    flex-direction: column;
+    gap: 10px 0;
+}
+.message textarea{
+    max-width: 37em;
+    max-height: 5em;
+    padding: 5px 15px;
+    letter-spacing: -1px;
+    word-spacing: -3px;
+    font-size: 14px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    outline: none;
+}
+.message textarea:hover{
+    border: 1px solid  var(--tertiary);
+    outline-color: var(--tertiary);
+}
+
+form .box{
+    position: relative;
+    top: 5px;
+} 
+ .box .error{
+    position: absolute;
+    top: 35px;
+}
+.box .check-box{
+    display: var(--flex);
+    padding: 15px 0;
+}
+.check-box input[type="checkBox"]{
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+.check-box label{
+    padding-left: 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.submit-btn input[type="submit"]{
+    padding: 13px 17.83em;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    background: var(--tertiary);
+    cursor: pointer;
+}
+.submit-btn input[type="submit"]:hover{
+    background: hsl(169, 67%, 15%);
+    transition-delay: 100ms;
+}
+
+.attribution{
+   position: absolute;
+   bottom: 0;
+}
+
+.error{
+    color: var(--error);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 620px) {
+    form h1{
+        margin: 15px auto;
+        font-size: 30px;
+    }
+
+    form .name{
+        display: block;
+    }
+    form .first-name,
+    .last-name{
+        margin-bottom: 20px;
+    }
+    .first-name label,
+    .last-name label{
+        margin-bottom: 5px;
+    }
+
+    form .query-wrapper p{
+        margin-bottom: 16px;
+    }
+    form .query-type{
+        flex-direction: column;
+    }
+    .query-type .general-enquiry{
+        margin-bottom: 15px;
+    }
+
+    form .email{
+        width: 15.8em;
+        margin-bottom: 5px;
+     }
+    .email label{
+        margin-bottom: 5px;
+     }
+
+    .message textarea{
+        max-width: 18em;
+        max-height: 15em;
+        letter-spacing: 1px;
+        word-spacing: -1px;
+    }
+
+    form .check-box{
+        align-items: center;
+        max-width: 14em;
+    }
+    .check-box input[type="checkBox"]{
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+    }
+
+    .submit-btn input[type="submit"]{
+        padding: 13px 8em;
+    }
+}
