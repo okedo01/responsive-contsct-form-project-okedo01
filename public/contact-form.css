@@ -189,6 +189,10 @@ form .box{
    bottom: 0;
 }
 
+.attribution a{
+   text-decoration: none;
+}
+
 .error{
     color: var(--error);
     font-size: 12px;

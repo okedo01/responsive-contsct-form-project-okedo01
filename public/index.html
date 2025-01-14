@@ -73,8 +73,16 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Eliah</a>.
+    Coded by <a href="#">Eliah &copy;right <span id="year"></span></a>.
   </div>
+  <script>
+    const year = document.getElementById('year');
+    const getFullYear = () => {
+        const now = new Date();
+        year.innerHTML = now.getFullYear();
+    }
+    getFullYear();
+  </script>
   <script src="./contact-form.js"></script>
 </body>
 </html>
